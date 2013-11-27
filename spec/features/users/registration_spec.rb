@@ -12,7 +12,7 @@ feature "registration" do
   end
 
   describe "signing up" do
-    it "registers in with valid credentials" do
+    scenario "registers in with valid credentials" do
       expect(page).to have_content(user.email)
     end
   end

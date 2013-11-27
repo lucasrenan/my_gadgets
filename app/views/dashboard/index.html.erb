@@ -1,1 +1,8 @@
 <h1>Dashboard</h1>
+
+<% if user_signed_in? %>
+  <%= link_to "my gadgets", gadgets_path %> |
+  <%= link_to "create gadget", new_gadget_path %>
+<% else %>
+  you should log in to manage gadgets
+<% end %>

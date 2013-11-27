@@ -11,13 +11,13 @@ feature "authentication" do
   end
 
   describe "logging" do
-    it "logs in with valid credentials" do
+    scenario "logs in with valid credentials" do
       expect(page).to have_content("logout")
     end
   end
 
   describe "logging out" do
-    it "logs out" do
+    scenario "logs out" do
       click_link "logout"
       expect(page).not_to have_content("logout")
     end

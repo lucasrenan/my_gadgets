@@ -1,0 +1,16 @@
+<h1>My gadgets</h1>
+
+<table>
+  <tbody>
+    <% @gadgets.each do |gadget| %>
+      <tr>
+        <td><%= link_to gadget.name, gadget %></td>
+        <td><%= link_to 'edit', edit_gadget_path(gadget) %></td>
+        <td><%= link_to 'remove', gadget, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Gadget', new_gadget_path %>

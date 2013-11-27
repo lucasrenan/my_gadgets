@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @gadget.name %>
+</p>
+
+<p>
+  <%= @gadget.description %>
+</p>
+
+<%= link_to 'edit', edit_gadget_path(@gadget) %> |
+<%= link_to 'my gadgets', gadgets_path %>
