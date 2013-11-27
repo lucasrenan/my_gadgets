@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
+gem 'mongoid', github: 'mongoid/mongoid'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -17,7 +18,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 3.0.4'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -25,19 +26,33 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'devise', '~> 3.2.2'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
+group :development do
+  gem 'clean_logger',     '~> 0.0.5'
+  gem 'guard-livereload', '~> 2.0.1'
+  gem 'rack-livereload',  '~> 0.3.15'
+  gem 'yajl-ruby',        '~> 1.1.0'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
+group :development, :test do
+  gem 'guard',              '~> 2.2.4'
+  gem 'factory_girl_rails', '~> 4.3.0'
+  gem 'rspec-rails',        '~> 2.14.0'
+  gem 'mongoid-rspec',      '~> 1.9.0'
+end
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :test do
+  gem 'guard-rspec',      '~> 4.0.4'
+  gem 'spork-rails',      '~> 4.0.0'
+  gem 'guard-spork',      '~> 1.5.1'
+  gem 'rb-fsevent',       '~> 0.9.3'
+  gem 'capybara',         '~> 2.2.0'
+  gem 'database_cleaner', '~> 1.2.0'
+  gem 'simplecov',        '~> 0.8.2', require: false
+end
