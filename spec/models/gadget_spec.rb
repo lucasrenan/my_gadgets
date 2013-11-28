@@ -6,6 +6,7 @@ describe Gadget do
 
   it { should be_valid }
   it { should belong_to(:user) }
+  it { should embed_many(:photos) }
   it { should validate_presence_of(:name) }
   it { should validate_presence_of(:user) }
 

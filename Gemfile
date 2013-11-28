@@ -25,6 +25,10 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'devise', '~> 3.2.2'
 gem 'mongoid_search', github: 'mauriciozaffari/mongoid_search'
+gem 'carrierwave-mongoid', github: 'carrierwaveuploader/carrierwave-mongoid', require: 'carrierwave/mongoid'
+gem 'mongoid-grid_fs', github: 'ahoward/mongoid-grid_fs'
+gem 'mini_magick', '~> 3.7.0'
+gem 'nested_form', '~> 0.3.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

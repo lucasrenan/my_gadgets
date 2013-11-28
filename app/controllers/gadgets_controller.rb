@@ -57,6 +57,6 @@ class GadgetsController < ApplicationController
     end
 
     def gadget_params
-      params.require(:gadget).permit(:name, :description)
+      params.require(:gadget).permit(:name, :description, photos_attributes: [:id, :image, :_destroy])
     end
 end

@@ -7,6 +7,9 @@ class Gadget
   field :description
 
   belongs_to :user
+  embeds_many :photos, cascade_callbacks: true
+
+  accepts_nested_attributes_for :photos, allow_destroy: true
 
   validates_presence_of :name, :user
 

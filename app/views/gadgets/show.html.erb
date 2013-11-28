@@ -8,5 +8,11 @@
   <%= @gadget.description %>
 </p>
 
+<ul>
+  <% @gadget.photos.each do |photo| %>
+    <%= image_tag photo.image.thumb.url %>
+  <% end %>
+</ul>
+
 <%= link_to 'edit', edit_gadget_path(@gadget) %> |
 <%= link_to 'my gadgets', gadgets_path %>
