@@ -24,6 +24,7 @@ gem 'jquery-rails', '~> 3.0.4'
 gem 'jbuilder', '~> 1.2'
 
 gem 'devise', '~> 3.2.2'
+gem 'mongoid_search', github: 'mauriciozaffari/mongoid_search'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

@@ -2,7 +2,7 @@ class GadgetsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @gadgets = Gadget.by_user_id(current_user.id)
+    @gadgets = GadgetSearch.new(current_user.id, params[:q]).search
   end
 
   def show
